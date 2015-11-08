@@ -79,7 +79,7 @@
 }
 
 
-//generate bg-x-y for each unique colors, bg(1-5)-(1-5) 25 in total
+//generate bg-x-y for each unique colors, bg(1-5)-(1-5) 25 in total, need to match UIID in the maincontroller
 $colors: $deeppink, $darkblue, $lightblue, $teal, $lightgreen;
 @for $i from 1 through length($colors) {
   @for $j from 1 through length($colors) {

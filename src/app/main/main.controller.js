@@ -23,6 +23,7 @@
       st: [],
       sp: []
     };
+    //uiID is used to determine the background css of the canvas: bg-1-1 for ha, bg-1-2 for ha and ra, etc
     var data = {
       ha: {
         name: 'Hadoop',
