@@ -9,8 +9,8 @@
   function MainController($mdSidenav) {
     var vm = this;
     vm.addServer = addServer;
-    vm.servers = [];
-    vm.canDestroy = false;
+    vm.servers = [[],[],[],[]];
+    vm.canDestroy = true;
     vm.destroyServer = destroyServer;
     vm.addApp = addApp;
     vm.removeApp = removeApp;
@@ -70,7 +70,7 @@
           addApp(app0.title.toLowerCase());
         }
       }
-      if (size === 0) {
+      if (vm.servers.length === 0) {
         vm.canDestroy = false;
       }
     }
