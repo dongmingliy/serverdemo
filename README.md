@@ -6,3 +6,8 @@ Libaries Used:
 - Angular Material
 - Moment
 - Ionicons
+
+Features:
+- Responsive layout
+- SCSS and Mixins
+- Cross browser support
