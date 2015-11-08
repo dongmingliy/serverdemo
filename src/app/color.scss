@@ -1,0 +1,33 @@
+$gray:rgb(30,30,30);
+$gray-light:rgb(100,100,100);
+$gray-dark:rgb(20,20,20);
+$white:white;
+$black: black;
+$deeppink: rgb(215,10,195);
+$darkblue: rgb(68,44,236);
+$lightblue: rgb(0,170,256);
+$teal: rgb(41,224,162);
+$lightgreen: rgb(106,241,25);
+.black-bg {
+  background-color:$black;
+}
+.black {
+  color:$black;
+}
+.gray-bg {
+  background-color:$gray;
+}
+.gray{
+  color:$gray;
+}
+.gray-light{
+  color:$gray-light;
+}
+.gray-dark-bg{
+  background-color:$gray-dark;
+}
+.white{
+  color:$white;
+}
+
+

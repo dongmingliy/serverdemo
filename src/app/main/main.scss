@@ -1,0 +1,91 @@
+@import 'color';
+
+.md-toolbar{
+  background-color:$gray;
+}
+
+.md-button.md-fab.outline {
+  box-shadow:0 0 1px 2px $white;
+  background-color: transparent;
+  color:white;
+}
+
+.md-button.md-fab.outline:hover {
+  box-shadow:0 0 1px 2px $white;
+  background-color: transparent;
+}
+
+.md-button.md-fab.outline[disabled] {
+  box-shadow:0 0 1px 2px $gray-light;
+  background-color: transparent;
+}
+
+.icon-big{
+  font-size:2.5em;
+}
+
+.sidebar-top{
+  padding-top:-20px;
+}
+
+.md-button.button-mini {
+  color:$white;
+  height:35px;
+  width:35px;
+  line-height:35px;
+  margin:5px;
+}
+
+.md-button.button-mini[disabled]{
+  box-shadow:0 0 1px 2px rgb(100,100,100);
+  background-color: transparent;
+}
+.server-canvas{
+  border-radius:5px;
+  background-color: $gray-light;
+  min-width:160px;
+}
+
+@mixin app-button($color) {
+  width:100%;
+  height:60px;
+  border-bottom:1px solid $gray;
+  padding-left:20px;
+  border-left:4px solid $color;
+  color:white;
+  background-color:$gray-dark;
+  .md-button {
+    background-color:$color;
+  }
+  .md-button:not([disabled]):hover{
+    background-color: $color;
+  }
+}
+
+.hadoop-app{
+  @include app-button($deeppink);
+}
+.rails-app{
+  @include app-button($darkblue);
+}
+.chronos-app{
+  @include app-button($lightblue);
+}
+.storm-app{
+  @include app-button($teal);
+}
+.spark-app{
+  @include app-button($lightgreen);
+}
+
+
+//generate bg-x-y for each unique colors, bg(1-5)-(1-5) 25 in total
+$colors: $deeppink, $darkblue, $lightblue, $teal, $lightgreen;
+@for $i from 1 through length($colors) {
+  @for $j from 1 through length($colors) {
+    .bg#{$i}-#{$j} {
+      background-image: linear-gradient(to bottom right, lighten(nth($colors, $i),10%) 0%, darken(nth($colors, $j),10%) 100%);
+    }
+  }
+}
+
