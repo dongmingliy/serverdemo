@@ -11,3 +11,4 @@ Features:
 - Responsive layout
 - SCSS and Mixins
 - Cross browser support
+- Time display using moment
