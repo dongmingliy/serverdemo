@@ -1,14 +1,10 @@
-# Mesosphere demo
+#demo
 Heroku: https://mesosphere-demo.herokuapp.com/
 
-Libaries Used:
-- AngularJS
-- Angular Material
-- Moment
-- Ionicons
-
-Features:
-- Responsive layout
-- SCSS and Mixins
-- Cross browser support
-- Time display using moment
+Instructions
+- Install Nodejs
+- npm install -g gulp
+- npm install
+- bower install
+- gulp server
+- server should be running in localhost:3000
