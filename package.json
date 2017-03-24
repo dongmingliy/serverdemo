@@ -11,15 +11,9 @@
     "errorhandler": "~1.0.0",
     "compression": "~1.0.1",
     "lodash": "~3.10.1",
-    "cookie-parser": "~1.0.1"
-  },
-  "scripts": {
-    "start": "node app.js",
-    "test": "gulp test"
-  },
-  "devDependencies": {
-    "estraverse": "~4.1.0",
+    "cookie-parser": "~1.0.1",
     "gulp": "~3.9.0",
+    "estraverse": "~4.1.0",
     "gulp-autoprefixer": "~3.0.2",
     "gulp-angular-templatecache": "~1.8.0",
     "del": "~2.0.2",
@@ -59,7 +53,15 @@
     "http-proxy-middleware": "~0.9.0",
     "chalk": "~1.1.1",
     "uglify-save-license": "~0.4.1",
-    "wrench": "~1.5.8"
+    "wrench": "~1.5.8",
+    "bower": "latest"
+  },
+  "scripts": {
+    "start": "node app.js",
+    "test": "gulp test",
+    "postinstall": "bower install && gulp default"
+  },
+  "devDependencies": {
   },
   "engines": {
     "node": ">=0.10.0"
