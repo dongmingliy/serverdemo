@@ -1,16 +1,16 @@
-<div ng-controller="MainController as main">
-  <div>
-    <div>
+<div ng-controller="MainController as main" class="row">
+  <div class="left-column">
+    <div class="add-destroy-buttons">
       <div>
-        <button ng-click="main.addServer()" >Add Server</button>
+        <button class="add-button" ng-click="main.addServer()" >Add Server</button>
       </div>
       <div ng-disabled="!main.canDestroy">
-        <button ng-click="main.destroyServer()" ng-disabled="!main.canDestroy">Destroy</button>
+        <button class="destroy-button" ng-click="main.destroyServer()" ng-disabled="!main.canDestroy">Destroy</button>
       </div>
     </div>
-    <div>
-      <div>Available Apps</div>
-      <div>
+    <div class="menu">
+      <div class="menu-title">Available Apps</div>
+      <div class="menu-item hadoop">
         Hadoop
         <span>
           <button ng-click="main.removeApp('ha')" ng-disabled="!main.appsRunning.ha.length">-</button>
@@ -18,28 +18,28 @@
                   >+</button>
         </span>
       </div>
-      <div>
+      <div class="menu-item rails">
         Rails
         <span>
           <button ng-click="main.removeApp('ra')" ng-disabled="!main.appsRunning.ra.length">-</button>
           <button ng-click="main.addApp('ra')" >+</button>
         </span>
       </div>
-      <div>
+      <div class="menu-item chronos">
         Chronos
         <span>
           <button ng-click="main.removeApp('ch')" ng-disabled="!main.appsRunning.ch.length">-</button>
           <button ng-click="main.addApp('ch')">+</button>
         </span>
       </div>
-      <div>
+      <div class="menu-item storm">
         Storm
         <span>
           <button ng-click="main.removeApp('st')" ng-disabled="!main.appsRunning.st.length">-</button>
           <button ng-click="main.addApp('st')">+</button>
         </span>
       </div>
-      <div>
+      <div class="menu-item spark">
         Spark
         <span>
           <button ng-click="main.removeApp('sp')" ng-disabled="!main.appsRunning.sp.length">-</button>
@@ -50,18 +50,18 @@
     <!-- filler div for spacing-->
     <div></div>
   </div>
-  <div style="margin: 100px;">
+  <div class="right-column">
     <section>
       <button ng-click="main.toggleMenu()" hide-gt-sm></button>
-      <div>Server Canvas</div>
+      <div class="server-heading">Server Canvas</div>
       <div>
         <md-grid-list md-cols-sm="1" md-cols-md="1" md-cols-gt-lg="4" md-cols-lg="3" md-row-height="5:3"
                       md-gutter="10px">
-          <div ng-repeat="server in main.servers" style="background-color:grey; height:200px;width:200px; margin:10px">
+          <div class="server-item" ng-repeat="server in main.servers" style="background-color:grey;">
             <div>
-              <div>{{ server[0].title }} {{ server[1].title && '+'}} {{server[1].title}}</div>
-              <div>{{ server[0].name }} {{ server[1].name && '+'}} {{server[1].name }}</div>
-              <div>
+              <div class="item-title">{{ server[0].title }} {{ server[1].title && '+'}} {{server[1].title}}</div>
+              <div class="item-name">{{ server[0].name }} {{ server[1].name && '+'}} {{server[1].name }}</div>
+              <div class="added-time">
                 <span ng-show="!(server[1].time && server[0].time)">
                   <span ng-show="server[0].time">{{'Added'}}</span>
                   <span am-time-ago="server[0].time"></span>

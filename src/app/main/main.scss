@@ -1,0 +1,181 @@
+.row {
+	width: 100%;
+}
+
+.left-column {
+	float: left;
+	background: #1e1e1e;
+	height: 100%;
+}
+
+.right-column {
+	float: left;
+	width: calc(83.33% - 200px);
+	height: 100%;
+}
+
+@media (min-width: 600px) {
+	.left-column {
+		width: 304px;
+	}
+
+	.right-column {
+		width: calc(100% - 304px);
+		padding: 20px;
+	}
+}
+
+.add-destroy-buttons {
+	padding: 57px 0 72px;
+	text-align: center;
+
+	> div {
+		display: inline-block;
+	}
+
+	button {
+		border: 0;
+		background: none;
+		color: white;
+		font-size: 12px;
+
+		&::before {
+			display: block;
+			height: 55px;
+			width: 55px;
+			border-radius: 50%;
+			box-shadow: 0 0 2px 2px rgba(255,255,255,1);
+			font-size: 40px;
+			line-height: 55px;
+			margin-bottom: 7px;
+		}
+
+		&.add-button {
+			margin-right: 17px;
+
+			&::before {
+				content: '+';
+			}
+		}
+
+		&.destroy-button {
+			&::before {
+				content: '\2014';
+			}
+		}
+
+		&:active {
+			&::before {
+				background: grey;
+			}
+		}
+	}
+}
+
+.menu {
+	background: #141414;
+}
+
+.menu-title {
+	padding: 20px;
+	background: #1e1e1e;
+	color: rgba(255,255,255,0.3);
+}
+
+.menu-item {
+	height: 60px;
+	padding: 0 5px 0 20px;
+	line-height: 60px;
+	border-left: 4px solid;
+	border-bottom: 1px solid #1e1e1e;
+
+	&.hadoop {
+		border-left-color: #d70ac3;
+
+		button {
+			background-color: #d70ac3;
+		}
+	}
+
+	&.rails {
+		border-left-color: #442cec;
+
+		button {
+			background-color: #442cec;
+		}
+	}
+
+	&.chronos {
+		border-left-color: #0af;
+
+		button {
+			background-color: #0af;
+		}
+	}
+
+	&.storm {
+		border-left-color: #29e0a2;
+
+		button {
+			background-color: #29e0a2;
+		}
+	}
+
+	&.spark {
+		border-left-color: #6af119;
+
+		button {
+			background-color: #6af119;
+		}
+	}
+
+	span {
+		display: block;
+		float: right;
+	}
+
+	button {
+		height: 35px;
+		width: 35px;
+		border-radius: 50%;
+		border: 0;
+		color: white;
+		font-size: 20px;
+		margin-left: 5px;
+
+		&[disabled] {
+			background: transparent;
+			box-shadow: 0 0 3px 2px rgba(255,255,255,0.5);
+			color: rgba(255,255,255,0.3);
+		}
+	}
+}
+
+.server-heading {
+	font-size: 45px;
+	margin: 20px 0;
+}
+
+.server-item {
+	float: left;
+	border-radius: 7px;
+	width: 24%;
+	height: 150px;
+	text-align: center;
+	padding: 20px;
+	margin: 5px;
+
+	.item-title {
+		font-size: 30px;
+	}
+
+	.item-name {
+
+	}
+
+	.added-time {
+		margin-top: 30px;
+		color: black;
+		font-size: 13px;
+	}
+}
